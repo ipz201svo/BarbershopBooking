@@ -1,0 +1,9 @@
+@baseAddress=https://localhost:7057/api
+
+POST {{baseAddress}}/Profile/signin
+Content-Type: application/json
+
+{
+  "email": "vlad.sk.20037@gmail.com",
+  "password": "Vlad13245"
+}
