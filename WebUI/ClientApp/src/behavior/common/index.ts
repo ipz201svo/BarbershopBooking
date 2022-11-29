@@ -1,0 +1,1 @@
+export {PaginatedListQueryResult} from './types';

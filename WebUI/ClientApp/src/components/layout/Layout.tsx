@@ -25,7 +25,6 @@ const Layout = () => {
         <AppBar />
         <Sidebar />
         <Content>
-          {/* {children} */}
           <Outlet />
         </Content>
       </Box>
