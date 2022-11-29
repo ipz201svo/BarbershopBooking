@@ -3,13 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{9D2FD818-B71A-43F0-AA13-8742464B53D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "WebUI\WebUI.csproj", "{9D2FD818-B71A-43F0-AA13-8742464B53D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{3580725C-89E0-456C-817A-947B8F7E0730}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{3580725C-89E0-456C-817A-947B8F7E0730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3ABC6AEE-8BBF-4A0B-8F06-72333D06041B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{3ABC6AEE-8BBF-4A0B-8F06-72333D06041B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{E2118CE5-50D0-4F5B-A5E1-4FA4980846E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{E2118CE5-50D0-4F5B-A5E1-4FA4980846E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{9E5055C7-23BD-4172-ADA0-018B94EC3B56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Profile", "Profile", "{C1D46B73-A2F7-4355-AB7D-4E82C3C17F9D}"
+	ProjectSection(SolutionItems) = preProject
+		BarbershopSignUp.http = BarbershopSignUp.http
+		CustomerSignUp.http = CustomerSignUp.http
+		SignIn.http = SignIn.http
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6748D2AB-C282-477D-9642-97A6570167AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +44,16 @@ Global
 		{E2118CE5-50D0-4F5B-A5E1-4FA4980846E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2118CE5-50D0-4F5B-A5E1-4FA4980846E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2118CE5-50D0-4F5B-A5E1-4FA4980846E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6748D2AB-C282-477D-9642-97A6570167AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6748D2AB-C282-477D-9642-97A6570167AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6748D2AB-C282-477D-9642-97A6570167AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6748D2AB-C282-477D-9642-97A6570167AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1D46B73-A2F7-4355-AB7D-4E82C3C17F9D} = {9E5055C7-23BD-4172-ADA0-018B94EC3B56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4FC4A4B9-1869-426B-86F7-FA3F33DFA4D2}

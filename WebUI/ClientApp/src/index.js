@@ -1,19 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import store from './behavior';
+import {Provider} from 'react-redux'
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
+// const baseUrl = document.getElementsByTagName('base')[ 0 ].getAttribute('href');
 
-root.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
-  </BrowserRouter>);
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      {/* <BrowserRouter basename={baseUrl}> */}
+      <App />
+      {/* </BrowserRouter> */}
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,8 +1,23 @@
+using BarbershopBooking.Application;
+using BarbershopBooking.Application.Common.Interfaces;
+using BarbershopBooking.Infrastructure;
+using BarbershopBooking.WebUI.Services;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddSwaggerGen();
 builder.Services.AddControllersWithViews();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddSingleton<ICurrentUserService, CurrentUserService>();
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+            options.SuppressModelStateInvalidFilter = true);
 
 var app = builder.Build();
 
@@ -16,6 +31,8 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 
 
 app.MapControllerRoute(
