@@ -1,0 +1,1 @@
+export {BarbershopBrief, BarbershopBriefList} from './types';

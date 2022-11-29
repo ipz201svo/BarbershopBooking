@@ -6,6 +6,7 @@ import Bookings from "../../bookings";
 import Home from "../../home";
 import Landing from "../../landing";
 import Layout from "../../layout";
+import MyBarbershop from "../../myBarbershop";
 import SignIn from "../../signIn";
 import {CustomerSignUp, BarbershopSignUp} from "../../signUp";
 import {NotFound} from "../../system/pages";
@@ -52,6 +53,10 @@ const config: RouteObject[] = [
       {
         path: 'barbershops/:id',
         element: <Barbershop />,
+      },
+      {
+        path: 'my-barbershop',
+        element: <MyBarbershop />,
       }
     ]
   },

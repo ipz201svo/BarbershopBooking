@@ -17,6 +17,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import ContentCutIcon from '@mui/icons-material/ContentCut';
 import {LinkBase} from '../common/base/navigation';
+import ChairIcon from '@mui/icons-material/Chair';
 
 const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})(
   ({theme, open}) => ({
@@ -69,6 +70,12 @@ const Sidebar = () => {
             <HomeIcon />
           </ListItemIcon>
           <ListItemText primary="Home" />
+        </ListItemButton>
+        <ListItemButton component={LinkBase} href="/my-barbershop">
+          <ListItemIcon>
+            <ChairIcon />
+          </ListItemIcon>
+          <ListItemText primary="My barbershop" />
         </ListItemButton>
         <ListItemButton component={LinkBase} href="/barbershops">
           <ListItemIcon>
