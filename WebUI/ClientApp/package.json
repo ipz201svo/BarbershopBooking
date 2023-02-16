@@ -1,6 +1,7 @@
 {
   "name": "webui",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "proxy": "http://localhost:7057",
   "dependencies": {
@@ -25,6 +26,7 @@
     "http-proxy-middleware": "^2.0.6",
     "jquery": "^3.6.1",
     "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21",
     "merge": "^2.1.1",
     "moment": "^2.29.4",
     "oidc-client": "^1.11.5",
@@ -49,6 +51,7 @@
     "workbox-routing": "^6.5.4",
     "workbox-strategies": "^6.5.4",
     "workbox-streams": "^6.5.4",
+    "yui-lint": "^0.2.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
